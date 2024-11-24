@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #A18AFF;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f3f7;
+    padding: 20px;
+    border: 2px solid #A18AFF;
+    border-width: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
+
+.sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.sidebar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+}
+
+.sidebar h1 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.sidebar h2 {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav li {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.sidebar nav li i {
+    margin-right: 10px;
+}
+
+.today-tasks-subtitles {
+    margin-top: 1rem;
+}
+
+.subtitle-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.subtitle-item i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.subtitle-personal {
+    color: #fd99af;
+}
+
+.subtitle-freelance {
+    color: #3fd4f3;
+}
+
+.subtitle-work {
+    color: #fac608;
+}
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addFilterButton {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+#addFilterButton:hover {
+    background-color: #45a049;
+}
+
+.sidebar .scheduled-tasks,
+.sidebar .settings {
+    margin-top: 20px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar .scheduled-tasks i,
+.sidebar .settings i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #A18AFF;
+    padding: 20px;
+    color: white;
+}
+
+.main-content h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container input#taskInput,
+.input-container input#dateInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.input-container input#dateInput {
+    width: 80px;
+    flex: none;
+}
+
+.date-time-picker {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.date-time-picker i {
+    font-size: 1.5rem;
+    margin-left: 3px;
+    color: #555;
+    cursor: pointer;
+}
+
+.date-time-picker i:hover {
+    color: #333;
+}
+
+.flatpickr-calendar {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.input-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+}
+
+.task {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+}
+
+.task span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.settings-content {
+    padding: 20px;
+    background-color: #A18AFF;
+    color: black;
+    border-radius: 10px;
+}
+
+.settings-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.settings-list li {
+    padding: 15px;
+    background: #f4f3f7;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s;
+    color: black;
+}
+
+.settings-list li:hover {
+    background: #ddd;
+}
+
+.settings-list li i {
+    font-size: 1.2rem;
+    color: #A18AFF;
+}
+
+.color-picker-container {
+    position: absolute;
+    z-index: 1000;
+    background-color: white; 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.color-picker input[type="color"] {
+    margin-bottom: 10px;
+}
+
+.color-picker input[type="text"] {
+
+   
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.color-picker button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.color-picker button:hover {
+    background-color: #45a049;
+}
+.fa-trash {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.fa-trash:hover {
+    color: #ca8bfe;
+}

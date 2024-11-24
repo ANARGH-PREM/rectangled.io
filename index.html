@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="profile">
+        <h1>Do-it</h1>
+        <img src="pic.jpg.png" alt="Profile Picture">
+        <h2>Anargh Prem</h2>
+        <hr />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <i class="fa-solid fa-calendar"></i> Today tasks
+          </li>
+        </ul>
+        <div class="today-tasks-subtitles">
+          <div class="subtitle-item">
+            <i class="fa-solid fa-circle subtitle-personal"></i> Personal
+          </div>
+          <div class="subtitle-item">
+            <i class="fa-solid fa-circle subtitle-freelance"></i> Freelance
+          </div>
+          <div class="subtitle-item">
+            <i class="fa-solid fa-circle subtitle-work"></i> Work
+          </div>
+        </div>
+        <button id="addFilterButton">+ Add Filter</button>
+      </nav>
+      <div class="scheduled-tasks">
+        <i class="fa-solid fa-clock"></i>
+        <p>Scheduled tasks</p>
+      </div>
+      <div class="settings" id="settingsButton">
+        <i class="fa-solid fa-gear"></i>
+        <p>Settings</p>
+      </div>
+    </aside>
+    <main class="main-content">
+      <h2>Today’s Main Focus</h2>
+      <h1>Design Team Meeting</h1>
+      <div class="js-add-grid" id="add-todo">
+        <div class="input-container">
+          <input type="text" id="taskInput" placeholder="What is your next task?" />
+          
+          <div class="date-time-picker">
+              <input type="text" id="dateInput" placeholder="Pick a date and time">
+              <i class="fa-solid fa-calendar" id="dateIcon"></i>
+              <i class="fa-solid fa-clock" id="timeIcon"></i>
+          </div>
+          <button id="addTaskButton">Add Task</button>
+      </div>
+      
+        <ul class="task-list" id="taskList"></ul>
+      </div>
+    </main>
+    <div id="colorPickerContainer" class="color-picker-container" hidden>
+      <div class="color-picker">
+        <input type="color" id="colorPicker" value="#ff0000">
+        <input type="text" id="filterNameInput" placeholder="Enter filter name">
+        <button id="addNewFilterButton">Add Filter</button>
+        <button id="cancelFilterButton">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
